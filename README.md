@@ -31,19 +31,7 @@ The trained recommendation model successfully generates personalized suggestions
 
 To make the results intuitive, I have applied visual analytics to the recommendation outputs. You can check out the following visualization materials included in the repository:
 
-
----
-
-## 🚀 Getting Started
-
-1. **Preview Data**
-python datasetpreview.py
-2. **Train the Model**  
-*(Add your training command here, e.g.: `python main.py --epochs 50`)*
-3. **View Recommendations**  
-Check the generated plots or use the interactive interface to input a User ID.
-
----
+## About Graph Neural Networks (GNN)
 ## 1. Graph Construction (Data Modeling)
 
 The foundation of the system is how we define the graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$.
