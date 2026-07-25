@@ -9,7 +9,7 @@ This project utilizes the **Amazon Book Dataset**. The raw data consists of the 
 
 ---
 
-## 🔍 Dataset Preview
+## Dataset Preview
 
 Before diving into model training, it is highly recommended to get familiar with the data distribution and content.  
 I have written a utility script for this purpose:
