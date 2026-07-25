@@ -1,5 +1,49 @@
 # GNN-Book_Recommendation
 A GNN-based book recommendation system models users, books, and their interactions as a graph, leveraging graph neural networks to capture complex, high-order relationships for more accurate and personalized recommendations.
+## Dataset
+
+This project utilizes the **Amazon Book Dataset**. The raw data consists of the following files:
+
+- `t10k-images-idx3-ubyte.gz`
+- `t10k-labels-idx1-ubyte.gz`
+
+---
+
+## 🔍 Dataset Preview
+
+Before diving into model training, it is highly recommended to get familiar with the data distribution and content.  
+I have written a utility script for this purpose:
+You can run `datasetpreview.py` to quickly **preview the dataset details**, including data volume, label mapping, and sample structures.
+
+---
+
+## Model Architecture
+
+After becoming familiar with the dataset, you can start training your own recommendation engine.  
+
+This project adopts **LightGCN**, a lightweight yet powerful variant of Graph Neural Networks (GNN). By removing unnecessary feature transformations and non-linearities, LightGCN efficiently captures high-order collaborative filtering signals between users and books.
+
+---
+
+## Results & Visualization
+
+The trained recommendation model successfully generates personalized suggestions, providing **the top 10 books with the highest confidence scores** for every user.
+
+To make the results intuitive, I have applied visual analytics to the recommendation outputs. You can check out the following visualization materials included in the repository:
+
+
+---
+
+## 🚀 Getting Started
+
+1. **Preview Data**
+python datasetpreview.py
+2. **Train the Model**  
+*(Add your training command here, e.g.: `python main.py --epochs 50`)*
+3. **View Recommendations**  
+Check the generated plots or use the interactive interface to input a User ID.
+
+---
 ## 1. Graph Construction (Data Modeling)
 
 The foundation of the system is how we define the graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$.
