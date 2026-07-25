@@ -44,18 +44,21 @@ Stack $K$ layers of graph convolution to capture $K$-order connectivity (e.g., "
 
 ### Step 2: Representation Fusion
 Combine embeddings from all layers (usually via weighted sum or concatenation):
+
 $$
 \mathbf{e}_u = \frac{1}{K+1} \sum_{k=0}^{K} \mathbf{e}_u^{(k)}
 $$
 
 ### Step 3: Interaction Prediction
 Calculate the matching score between user $u$ and book $i$:
+
 $$
 \hat{y}_{ui} = \mathbf{e}_u^\top \mathbf{e}_i
 $$
 
 ### Step 4: Optimization Objective
 Use **BPR (Bayesian Personalized Ranking)** loss to ensure the predicted score of a positively interacted book is higher than an unobserved one:
+
 $$
 \mathcal{L}_{BPR} = -\sum_{(u,i,j) \in \mathcal{O}} \ln \sigma(\hat{y}_{ui} - \hat{y}_{uj}) + \lambda\|\Theta\|^2
 $$
